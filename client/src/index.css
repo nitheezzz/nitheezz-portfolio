@@ -80,6 +80,10 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--leaf); outline-
 .text-link svg { transition: transform .22s ease, color .22s ease; }
 .text-link:hover { color: var(--leaf); }
 .text-link:hover svg { transform: translate(3px, -3px); }
+.resume-link { display: inline-flex; align-items: center; gap: 7px; color: #d7d8cc; font-size: 11px; white-space: nowrap; transition: color .22s ease; }
+.resume-link svg { color: var(--leaf); transition: transform .22s ease; }
+.resume-link:hover { color: var(--leaf); }
+.resume-link:hover svg { transform: translateY(2px); }
 .hero-footnote { margin-top: 62px; color: #898d7e; font-size: 9px; }
 .hero-footnote span { margin-right: 9px; color: var(--leaf); }
 .orb-stage { position: relative; display: grid; place-items: center; justify-self: center; width: min(100%, 490px); aspect-ratio: 1; perspective: 900px; isolation: isolate; transform-style: preserve-3d; will-change: transform; }
@@ -129,6 +133,12 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--leaf); outline-
 .about-signoff { display: flex; align-items: center; gap: 12px; margin-top: 29px; font-size: 11px; font-weight: 600; }
 .signature-mark { display: grid; place-items: center; width: 37px; height: 37px; border: 1px solid var(--line); border-radius: 50%; color: var(--leaf); font: italic 17px var(--serif); }
 .about-signoff small { color: #9da193; font-size: 9px; font-weight: 400; }
+.portrait-stage { width: min(100%, 430px); aspect-ratio: .84; }
+.portrait-frame { position: relative; z-index: 2; width: min(68%, 285px); margin: 0; padding: 8px; border: 1px solid rgba(238, 239, 228, .24); background: rgba(255, 255, 255, .035); box-shadow: 0 18px 48px rgba(0, 0, 0, .25), 0 0 30px rgba(197, 250, 112, .045); }
+.portrait-frame img { display: block; width: 100%; height: auto; aspect-ratio: 1365 / 2048; object-fit: contain; object-position: center; background: #485d68; }
+.portrait-caption { display: flex; align-items: center; gap: 8px; padding: 11px 3px 2px; color: #aeb2a0; font: 8px var(--mono); letter-spacing: .06em; white-space: nowrap; }
+.portrait-indicator { flex: none; width: 5px; height: 5px; border-radius: 50%; background: var(--leaf); box-shadow: 0 0 9px rgba(197, 250, 112, .55); }
+.caption-separator { flex: 1; height: 1px; background: rgba(238, 239, 228, .24); }
 .work-section { color: #242822; background: var(--paper-deep); --ink: #242822; --muted: #6d7066; --line: rgba(36, 40, 34, .19); }
 .work-section .section-kicker { color: #666a60; }
 .work-section .kicker-note { color: #87897e; }
@@ -186,6 +196,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--leaf); outline-
 .contact-main h2 { margin-top: 17px; font-size: clamp(50px, 6vw, 82px); }
 .contact-main h2 em { color: var(--leaf); }
 .contact-actions { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: flex-start; gap: 17px; min-width: min(100%, 300px); padding-bottom: 8px; }
+.contact-note { max-width: 300px; margin: 0; color: #afb2a5; font-size: 11px; line-height: 1.7; }
 .contact-email { display: flex; align-items: center; gap: 16px; width: 100%; padding-bottom: 14px; border-bottom: 1px solid rgba(238, 239, 228, .28); font: 14px var(--mono); transition: color .25s ease; }
 .contact-email:hover, .github-link:hover { color: var(--leaf); }
 .contact-email svg { margin-left: auto; transition: transform .25s ease; }
@@ -244,6 +255,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--leaf); outline-
   .hero-intro { max-width: 390px; font-size: 14px; }
   .hero-footnote { margin-top: 37px; }
   .orb-stage { align-self: center; width: min(100%, 380px); margin: 18px auto 0; }
+  .hero-actions { flex-wrap: wrap; gap: 16px 20px; }
   .hero-side-note { right: -10px; top: auto; bottom: 26%; }
   .hero-frame-note { right: 0; bottom: 21px; font-size: 7px; }
   .scroll-cue { bottom: 18px; }
