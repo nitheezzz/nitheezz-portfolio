@@ -10,6 +10,8 @@
 
 - [x] **Public résumé download** — Add the supplied résumé PDF as a clearly labeled public download link. The user explicitly approved making the file accessible to visitors of the public portfolio.
 
-- [x] **Cinematic nostalgic visual direction and animations** — Use a cinematic, motion-led adaptation of the user's nostalgic/minimal direction: dark ink/charcoal, selective CRT-green and warm amber light, restrained tasteful 3D, expressive kinetic type and scroll/section animation. Keep mobile usability, keyboard access, readable content, and `prefers-reduced-motion` support; motion must not obstruct reading or be required to access content.
+- [x] **Professional typography** — Use a polished, legible modern sans-serif system stack for headlines and body copy, with clear hierarchy, readable weights, and restrained tracking. Reserve monospaced type for technical labels and metadata; do not add a remote font dependency.
 
-- [ ] **Checkpoint and publish revised portfolio** — Keep the site a one-page static portfolio with the route manifest synchronized to `/`. Build using the existing static Vite project configuration, checkpoint the photo/copy/résumé changes on the canonical GitHub `main`, and publish the revised site after its publish request is approved. Do not enable server, database, or login services.
+- [x] **Responsive page alignment and motion** — Keep section edges and content aligned across desktop/mobile widths, with no horizontal page overflow. Do not use automatically side-to-side sliding content; the category band is static and wraps/respaces on narrow screens. Keep remaining motion purposeful and honor reduced-motion preferences.
+
+- [ ] **Checkpoint and publish revised portfolio** — Keep the site a one-page static portfolio with the route manifest synchronized to `/`. Push the photo/copy/résumé/font/alignment changes to the canonical GitHub `main`. The config-plane publish API returned `github_canonical_active`; publish the final revision from the project Dashboard only after the user approves that exact public release. Do not enable server, database, or login services.

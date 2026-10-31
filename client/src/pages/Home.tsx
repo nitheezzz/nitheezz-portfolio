@@ -234,13 +234,9 @@ export default function Home() {
         <div className="hero-frame-note" aria-hidden="true">A PERSONAL PORTFOLIO <span>—</span> 2026</div>
       </section>
 
-      <div className="ticker" aria-label="Web development, IoT, learning by making">
-        <div className="ticker-track" aria-hidden="true">
-          {Array.from({ length: 2 }, (_, i) => (
-            <div className="ticker-group" key={i}>
-              <span>WEB DEVELOPMENT</span><b>✳</b><span>INTERNET OF THINGS</span><b>✳</b><span>PROJECT WORK</span><b>✳</b><span>HARDWARE</span><b>✳</b>
-            </div>
-          ))}
+      <div className="ticker">
+        <div className="ticker-group" aria-label="Areas of focus">
+          <span>WEB DEVELOPMENT</span><b aria-hidden="true">✳</b><span>INTERNET OF THINGS</span><b aria-hidden="true">✳</b><span>PROJECT WORK</span><b aria-hidden="true">✳</b><span>HARDWARE</span>
         </div>
       </div>
 
